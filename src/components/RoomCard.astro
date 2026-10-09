@@ -1,0 +1,16 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  description: string;
+  area?: string;
+}
+const { href, title, description, area } = Astro.props;
+---
+
+<a class="room-card" href={href}>
+  {area && <span class="room-card-area">{area}</span>}
+  <h3 class="room-card-title">{title}</h3>
+  <p class="room-card-desc">{description}</p>
+  <span class="room-card-link">See this room <span aria-hidden="true">→</span></span>
+</a>

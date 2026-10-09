@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QRCard from '../../components/QRCard.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const rooms = (await getCollection('rooms')).sort((a, b) => a.data.order - b.data.order);
+  return rooms.map((room) => ({
+    params: { room: room.id },
+    props: { room },
+  }));
+}
+
+const { room } = Astro.props;
+const { Content } = await render(room);
+
+const rooms = (await getCollection('rooms')).sort((a, b) => a.data.order - b.data.order);
+const index = rooms.findIndex((r) => r.id === room.id);
+const prev = index > 0 ? rooms[index - 1] : null;
+const next = index >= 0 && index < rooms.length - 1 ? rooms[index + 1] : null;
+---
+
+<BaseLayout title={room.data.title} description={room.data.description}>
+  <nav class="no-print" aria-label="Breadcrumb" style="font-size:0.85rem;margin-bottom:1.25rem">
+    <a href="/tour">Tour</a> <span aria-hidden="true">·</span> <span>{room.data.title}</span>
+  </nav>
+
+  <header class="page-head">
+    <span class="eyebrow">{room.data.roomArea ?? 'A room in the house'}</span>
+    <h1>{room.data.title}</h1>
+    <p>{room.data.description}</p>
+  </header>
+
+  <div class="callout callout-note no-print">
+    <p class="callout-label">If you're scanning at the house</p>
+    <p>
+      You're in the right place — this is the page the QR code in this room opens.
+    </p>
+  </div>
+
+  <article class="prose">
+    <Content />
+  </article>
+
+  <section class="section">
+    <h2>This room's QR card</h2>
+    <p class="section-intro">
+      The printable, laminated card for this room. Open the SVG file directly (in
+      <code>public/qr/{room.id}-card.svg</code>), or print it from here, then trim and laminate.
+    </p>
+    <QRCard slug={room.id} title={room.data.title} />
+  </section>
+
+  <nav class="room-nav no-print" aria-label="Room navigation" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:2.5rem">
+    {prev ? (
+      <a class="btn btn-ghost" href={`/tour/${prev.id}`}>← {prev.data.title}</a>
+    ) : (
+      <span></span>
+    )}
+    {next ? (
+      <a class="btn btn-primary" href={`/tour/${next.id}`}>{next.data.title} →</a>
+    ) : (
+      <a class="btn btn-primary" href="/tour">Back to the tour →</a>
+    )}
+  </nav>
+</BaseLayout>

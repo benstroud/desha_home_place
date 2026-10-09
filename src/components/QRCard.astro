@@ -1,0 +1,19 @@
+---
+interface Props {
+  slug: string;
+  title: string;
+}
+const { slug, title } = Astro.props;
+---
+
+<figure class="qr-figure">
+  <img
+    class="qr-img"
+    src={`/qr/${slug}-card.svg`}
+    alt={`Printable QR code card for ${title}`}
+    loading="lazy"
+    width="450"
+    height="600"
+  />
+  <figcaption>{title} — printable card</figcaption>
+</figure>

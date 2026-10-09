@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RoomCard from '../components/RoomCard.astro';
+import { getCollection } from 'astro:content';
+
+const rooms = (await getCollection('rooms')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="The Franklin Desha House" description="Welcome to the Franklin Desha House — a Desha–Searcy family legacy in Independence County, Arkansas, in the family since 1847.">
+  <section class="hero">
+    <span class="eyebrow">National Register of Historic Places · est. 1847</span>
+    <h1>The Franklin Desha House</h1>
+    <p class="hero-sub">A Desha–Searcy family legacy in Independence County, Arkansas — built 1847, in the family ever since.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/tour">Take the tour</a>
+      <a class="btn btn-ghost" href="/history">Our story</a>
+    </div>
+    <p class="hero-note">
+      Welcome, guests. This is a family home first — we're glad to share its story with you.
+      Throughout the house you'll find <strong>QR codes</strong>; scan one with your phone camera to
+      open the story of that room.
+    </p>
+  </section>
+
+  <section class="section">
+    <span class="eyebrow">Welcome</span>
+    <h2>Welcome to our family home</h2>
+    <div class="prose">
+      <p>
+        Since <strong>1847</strong>, the Franklin Desha House has belonged to the Desha family and its
+        descendants — today's Stroud and Vandiver families. It is one of the oldest houses in
+        Independence County, and in 1986 it was listed on the National Register of Historic Places.
+      </p>
+      <p>
+        We invite you to wander the rooms, run your hand along the old timbers, and scan the QR codes
+        we've placed throughout the house to learn what each room has seen. This website is our way of
+        welcoming you into a story that has been unfolding here for nearly 180 years.
+      </p>
+    </div>
+    <div class="callout callout-family">
+      <p class="callout-label">A note from the family</p>
+      <p>
+        ▲ <em>Family note to Robert &amp; Mary:</em> add a short personal welcome here — a sentence or two
+        about what this house means to you and what you hope guests take away. Replace this box when ready.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <span class="eyebrow">The tour</span>
+    <h2>Take the tour</h2>
+    <p class="section-intro">
+      Each QR code in the house opens a page about that room. You can also browse the full tour here, or
+      download the printable tour guide for a visit without your phone.
+    </p>
+    <div class="grid grid-rooms">
+      {
+        rooms.map((room) => (
+          <RoomCard
+            href={`/tour/${room.id}`}
+            title={room.data.title}
+            description={room.data.description}
+            area={room.data.roomArea}
+          />
+        ))
+      }
+    </div>
+    <p style="margin-top:1.4rem">
+      <a class="btn btn-ghost" href="/tour/print">Printable tour guide <span aria-hidden="true">→</span></a>
+    </p>
+  </section>
+
+  <section class="section">
+    <span class="eyebrow">A house, a family, a legacy</span>
+    <h2>More of the story</h2>
+    <div class="grid grid-two">
+      <a class="room-card" href="/history">
+        <span class="room-card-area">The house</span>
+        <h3 class="room-card-title">History</h3>
+        <p class="room-card-desc">From its 1847 construction through the Mexican–American War, the Civil War encampment of 1863, and its National Register listing in 1986.</p>
+        <span class="room-card-link">Read the history <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="room-card" href="/family">
+        <span class="room-card-area">The people</span>
+        <h3 class="room-card-title">The Desha &amp; Searcy families</h3>
+        <p class="room-card-desc">A Kentucky governor, a county namesake, a territorial judge, and the family that built this house.</p>
+        <span class="room-card-link">Meet the family <span aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <span class="eyebrow">Photographs</span>
+    <h2>From the family album</h2>
+    <p class="section-intro">
+      ▲ <em>Family note:</em> add your photographs here. Drop them into <code>public/photos/</code> and
+      reference them from a gallery page (see README). Until then, these placeholders mark where the
+      pictures will live.
+    </p>
+    <div class="grid grid-two photo-strip">
+      {
+        [1, 2, 3, 4].map((n) => (
+          <div class="photo-placeholder" aria-hidden="true">Family photograph {n} coming soon</div>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .photo-strip {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .photo-placeholder {
+    aspect-ratio: 4 / 3;
+    border: 1px dashed var(--line);
+    border-radius: var(--radius);
+    background: var(--paper-soft);
+    color: var(--ink-soft);
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem;
+  }
+</style>

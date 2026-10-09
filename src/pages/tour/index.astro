@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RoomCard from '../../components/RoomCard.astro';
+import { getCollection } from 'astro:content';
+
+const rooms = (await getCollection('rooms')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout
+  title="Tour"
+  description="A room-by-room tour of the Franklin Desha House — scan the QR codes placed throughout the house to open each room's story."
+>
+  <header class="page-head">
+    <span class="eyebrow">The tour</span>
+    <h1>A Tour of the House</h1>
+    <p>
+      Every room has a story. Use the QR codes placed around the house, or browse the tour here —
+      whichever way you wander, each page tells you what you're looking at and what it has seen.
+    </p>
+  </header>
+
+  <section class="section">
+    <div class="callout callout-note">
+      <p class="callout-label">How the QR codes work</p>
+      <p>
+        Point your phone's camera at any QR code in the house. A link will appear — tap it to open that
+        room's page on this website. No app needed; your phone's built-in camera is enough. If you'd
+        rather not use your phone, the printable tour guide covers the same ground.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>The rooms</h2>
+    <div class="grid grid-rooms">
+      {
+        rooms.map((room) => (
+          <RoomCard
+            href={`/tour/${room.id}`}
+            title={room.data.title}
+            description={room.data.description}
+            area={room.data.roomArea}
+          />
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Printable tour guide</h2>
+    <p class="section-intro">
+      A printer-friendly page showing every room's QR card — handy for arranging your own tour map, or
+      for guests who prefer paper.
+    </p>
+    <p class="no-print">
+      <a class="btn btn-ghost" href="/tour/print">Open the printable guide <span aria-hidden="true">→</span></a>
+    </p>
+  </section>
+</BaseLayout>

@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QRCard from '../../components/QRCard.astro';
+import { getCollection } from 'astro:content';
+
+const rooms = (await getCollection('rooms'))
+  .filter((r) => r.data.qr !== false)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout
+  title="Printable tour guide"
+  description="A printer-friendly page showing the QR cards for every room of the Franklin Desha House."
+>
+  <header class="page-head">
+    <span class="eyebrow">For guests and family</span>
+    <h1>Printable tour guide</h1>
+    <p>
+      This page prints as a sheet of every room's QR card. For the best result, open the individual SVG
+      card files (in <code>public/qr/</code>) at 100% and print on card stock.
+    </p>
+  </header>
+
+  <section class="no-print" style="margin-bottom:2rem">
+    <a class="btn btn-primary" href="/tour">← Back to the tour</a>
+  </section>
+
+  <section>
+    <div class="qr-grid">
+      {rooms.map((room) => (
+        <QRCard slug={room.id} title={room.data.title} />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

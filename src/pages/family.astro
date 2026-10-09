@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+const people = (await getCollection('family')).sort((a, b) => a.data.order - b.data.order);
+const rendered = await Promise.all(
+  people.map(async (person) => ({ person, Content: (await render(person)).Content })),
+);
+---
+
+<BaseLayout
+  title="Family"
+  description="The Desha and Searcy families — from a Kentucky governor to the builders of the Franklin Desha House in Independence County, Arkansas."
+>
+  <header class="page-head">
+    <span class="eyebrow">The people</span>
+    <h1>The Desha &amp; Searcy Families</h1>
+    <p>
+      Two families, joined by marriage, whose names are woven into the history of Arkansas — a Kentucky
+      governor, county namesakes, a territorial judge, and the people who built this house.
+    </p>
+  </header>
+
+  <section class="section">
+    <article class="prose">
+      <p>
+        Franklin Desha built this house in 1847 on land his family had worked for years. He was the
+        grandson of a Kentucky governor, the son of a Robert Desha who settled at Helena, and the nephew
+        of the Benjamin Desha for whom Desha County is named. He married <strong>Elizabeth Searcy</strong>,
+        daughter of <strong>Richard Searcy</strong> — the first clerk and judge in the Arkansas Territory,
+        for whom both the city of Searcy and Searcy County are named.
+      </p>
+      <p>
+        Their house passed down through their descendants — through the Stroud and Vandiver lines — and
+        remains a family home today.
+      </p>
+    </article>
+  </section>
+
+  {
+    rendered.map(({ person, Content }) => (
+      <section class="section">
+        <span class="eyebrow">{person.data.relationship ?? 'Family'}</span>
+        <h2>{person.data.name}</h2>
+        <p class="section-intro">
+          {person.data.born && <>Born {person.data.born}.</>}
+          {person.data.died && <> Died {person.data.died}.</>}
+        </p>
+        <article class="prose">
+          <Content />
+        </article>
+      </section>
+    ))
+  }
+
+  <section class="section">
+    <h2>A note on the family tree</h2>
+    <article class="prose">
+      <p>
+        The published record on the Desha line holds a genuine puzzle: it lists a Robert Desha
+        (1791–1849) who was a Tennessee congressman and the brother of Governor Joseph Desha — but who
+        moved to Mobile, Alabama, not Helena. Yet the Franklin Desha House's National Register record
+        names Franklin's father as a Robert Desha who settled Helena, Arkansas.
+      </p>
+      <p>
+        There were, it seems, more than one Robert Desha in this family. The family's own records —
+        Bibles, deeds, probate papers, and census records — are the final authority, and a full family
+        tree with source citations is coming soon to this site.
+      </p>
+    </article>
+  </section>
+</BaseLayout>

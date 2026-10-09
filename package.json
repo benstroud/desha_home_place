@@ -1,0 +1,22 @@
+{
+  "name": "desha-home-place",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "qr": "node scripts/generate-qr.mjs",
+    "prebuild": "node scripts/generate-qr.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3",
+    "qrcode": "^1.5.4"
+  }
+}
