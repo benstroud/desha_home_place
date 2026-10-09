@@ -110,6 +110,20 @@ The page renders a fixed-width portrait beside the biography. (Centered-crop
 portraits, resize to ~900px wide, and add a light sharpen like this:)
 `npm run photos -- --portrait --sharpen`.
 
+For more than one portrait of the same person (e.g. young and old), list them in
+`photos` — each with an optional `caption` — instead of `photo`:
+
+```yaml
+---
+name: Elizabeth Jett Searcy
+photos:
+  - src: /photos/elizabeth-jett-searcy.jpg
+    caption: Elizabeth as a young woman
+  - src: /photos/elizabeth-jett-searcy-old.jpg
+    caption: Elizabeth in her later years
+---
+```
+
 ### The processing script
 
 `scripts/process-photos.mjs` (`npm run photos`) is deliberately conservative —

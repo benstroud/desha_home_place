@@ -4,7 +4,15 @@ import { getCollection, render } from 'astro:content';
 
 const people = (await getCollection('family')).sort((a, b) => a.data.order - b.data.order);
 const rendered = await Promise.all(
-  people.map(async (person) => ({ person, Content: (await render(person)).Content })),
+  people.map(async (person) => {
+    // A person may have a single `photo` or a `photos` list (young + old portraits).
+    const portraits = person.data.photos?.length
+      ? person.data.photos.map((p) => ({ src: p.src, caption: p.caption }))
+      : person.data.photo
+        ? [{ src: person.data.photo }]
+        : [];
+    return { person, portraits, Content: (await render(person)).Content };
+  }),
 );
 ---
 
@@ -38,7 +46,7 @@ const rendered = await Promise.all(
   </section>
 
   {
-    rendered.map(({ person, Content }) => (
+    rendered.map(({ person, portraits, Content }) => (
       <section class="section">
         <span class="eyebrow">{person.data.relationship ?? 'Family'}</span>
         <h2>{person.data.name}</h2>
@@ -46,15 +54,14 @@ const rendered = await Promise.all(
           {person.data.born && <>Born {person.data.born}.</>}
           {person.data.died && <> Died {person.data.died}.</>}
         </p>
-        {person.data.photo && (
-          <figure class="portrait">
-            <img
-              src={person.data.photo}
-              alt={`Portrait of ${person.data.name}`}
-              loading="lazy"
-              width="900"
-              height="1200"
-            />
+        {portraits.length > 0 && (
+          <figure class="portrait-gallery">
+            {portraits.map((p) => (
+              <figure class="portrait">
+                <img src={p.src} alt={`Portrait of ${person.data.name}`} loading="lazy" />
+                {p.caption && <figcaption>{p.caption}</figcaption>}
+              </figure>
+            ))}
           </figure>
         )}
         <article class="prose">

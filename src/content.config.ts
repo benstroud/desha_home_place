@@ -33,7 +33,14 @@ const family = defineCollection({
     died: z.string().optional(),
     relationship: z.string().optional(),
     order: z.number().default(99),
+    // Single portrait (simple case). For multiple portraits of one person
+    // (e.g. young and old), use `photos` instead — see the Elizabeth entry.
     photo: z.string().optional(),
+    // Multiple portraits rendered side-by-side. Each item may carry an
+    // optional caption ("as a young woman", "later in life", …).
+    photos: z
+      .array(z.object({ src: z.string(), caption: z.string().optional() }))
+      .optional(),
   }),
 });
 
