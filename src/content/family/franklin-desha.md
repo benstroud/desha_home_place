@@ -4,7 +4,11 @@ born: early 1800s
 died: 1800s
 relationship: Builder of the house
 order: 1
-photo: /photos/franklin-desha-young.jpg
+photos:
+  - src: /photos/franklin-desha-young.jpg
+    caption: Franklin as a young man
+  - src: /photos/franklin-desha-old.jpg
+    caption: Franklin in his later years
 ---
 
 Franklin Desha built this house in **1847**, and it has been in his family ever since.
@@ -19,13 +23,10 @@ daughter of Richard Searcy — the judge for whom **Searcy** and **Searcy County
 During the American Civil War he served in the **Confederate Army**, and in 1863 the property
 was the site of a Confederate encampment.
 
+The two portraits above show him as a young man and in his later years.
+
 His house — a double-pen dogtrot of exactly the sort brought west by Upper South settlers —
 was listed on the National Register of Historic Places in 1986.
-
-<figure class="figure">
-  <img src="/photos/franklin-desha.jpg" alt="An original photograph of Franklin Desha" loading="lazy" />
-  <figcaption>Franklin Desha — an original family photograph.</figcaption>
-</figure>
 
 <div class="callout callout-family">
 <p class="callout-label">Family note</p>
