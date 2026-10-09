@@ -25,7 +25,7 @@ npm run preview    # preview the production build locally
 ```
 public/               static assets copied verbatim into the build
   CNAME               the custom domain (franklin-desha-house.com)
-  favicon.svg
+  fox-mark.svg        the Fox Hill brand mark (also used as the site favicon)
   qr/                 generated QR cards (gitignored; rebuilt on `build`)
 src/
   content/
