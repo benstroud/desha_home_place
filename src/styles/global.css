@@ -95,7 +95,6 @@ a:hover {
   place-items: center;
   width: 46px;
   height: 46px;
-  border-radius: 10px;
   background: var(--green);
   color: var(--paper);
   font-family: var(--serif);
