@@ -102,6 +102,7 @@ a:hover {
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: 0.04em;
+  object-fit: contain;
 }
 
 .brand-text {
