@@ -4,6 +4,7 @@ born: December 9, 1768
 died: October 11, 1842
 relationship: Grandfather of Franklin Desha
 order: 4
+photo: /photos/joseph-desha.jpg
 ---
 
 Joseph Desha was Franklin Desha's grandfather — and one of the most consequential figures of his
