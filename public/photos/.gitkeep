@@ -1,0 +1,11 @@
+# Photos for The Franklin Desha House live here (public/photos/).
+
+Drop web-ready image files (jpg / webp / png) into public/photos/ and reference them
+in Markdown as ![Alt text](/photos/your-file.jpg), or set a family member's `photo:`
+frontmatter field to /photos/your-file.jpg to show a portrait on the /family page.
+
+For batch cropping / resizing / optimizing of large scans, see:
+  scripts/process-photos.mjs   (run `npm run photos -- --help`)
+
+Originals you don't want served should be kept OUTSIDE public/ (e.g. a private folder
+in the repo root, or a folder you gitignore) so they never get deployed.

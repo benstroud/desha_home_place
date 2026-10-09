@@ -336,6 +336,49 @@ main {
   font-size: 0.9rem;
 }
 
+/* ---------- Portrait (family photos) ---------- */
+
+.portrait {
+  margin: 1.5rem 0;
+  max-width: 380px;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* An un-floatable inline photo/figure (used inside .prose) */
+.figure {
+  margin: 1.75rem 0;
+  max-width: 520px;
+}
+
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+@media (min-width: 720px) {
+  .portrait {
+    float: right;
+    margin: 0.25rem 0 1rem 2rem;
+  }
+}
+
 /* ---------- Prose ---------- */
 
 .prose {

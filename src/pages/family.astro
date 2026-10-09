@@ -46,6 +46,17 @@ const rendered = await Promise.all(
           {person.data.born && <>Born {person.data.born}.</>}
           {person.data.died && <> Died {person.data.died}.</>}
         </p>
+        {person.data.photo && (
+          <figure class="portrait">
+            <img
+              src={person.data.photo}
+              alt={`Portrait of ${person.data.name}`}
+              loading="lazy"
+              width="900"
+              height="1200"
+            />
+          </figure>
+        )}
         <article class="prose">
           <Content />
         </article>

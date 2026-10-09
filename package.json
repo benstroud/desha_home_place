@@ -13,13 +13,15 @@
     "preview": "astro preview",
     "astro": "astro",
     "qr": "node scripts/generate-qr.mjs",
-    "prebuild": "node scripts/generate-qr.mjs"
+    "prebuild": "node scripts/generate-qr.mjs",
+    "photos": "node scripts/process-photos.mjs"
   },
   "dependencies": {
     "astro": "^5.0.0"
   },
   "devDependencies": {
     "gray-matter": "^4.0.3",
-    "qrcode": "^1.5.4"
+    "qrcode": "^1.5.4",
+    "sharp": "^0.33.5"
   }
 }

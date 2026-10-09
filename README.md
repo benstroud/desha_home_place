@@ -27,6 +27,8 @@ public/               static assets copied verbatim into the build
   CNAME               the custom domain (franklin-desha-house.com)
   fox-mark.svg        the Fox Hill brand mark (also used as the site favicon)
   qr/                 generated QR cards (gitignored; rebuilt on `build`)
+  photos/             optimized site photos (originals live in scans/ — see below)
+scans/                private source scans (gitignored; never deployed)
 src/
   content/
     rooms/*.md        one file per tour room -> /tour/<slug>  (each is a QR endpoint)
@@ -38,6 +40,7 @@ src/
   styles/global.css   the design system (colors, type, layout)
 scripts/
   generate-qr.mjs     builds the printable QR cards
+  process-photos.mjs  batch resizes/crops/optimizes photos (see "Adding photographs")
 .github/workflows/    GitHub Pages deploy
 ```
 
@@ -81,9 +84,50 @@ the home page. The site URL is read from `SITE_URL` (defaults to the production 
 
 ## Adding photographs
 
-Create `public/photos/` and drop images in (e.g. `public/photos/parlor-1940.jpg`), then
-reference them in Markdown as `![Alt text](/photos/parlor-1940.jpg)`. Optimize large images
-before committing (a few hundred KB each is fine for mobile visitors on rural connections).
+### The short version
+
+1. Put your original scans in a `scans/` folder at the repo root (this folder is
+   **gitignored — it is never deployed**).
+2. Run `npm install` once (first time) to get `sharp`, then run
+   `npm run photos` (or `npm run photos -- --help` for options). This resizes,
+   optionally crops to a portrait, and optimizes each image into
+   `public/photos/`.
+3. Reference the result in Markdown: `![Alt text](/photos/parlor-1940.jpg)`.
+
+### Family portraits
+
+To show a family member's portrait on the **/family** page, set the `photo` field
+in their `src/content/family/<name>.md` frontmatter to the optimized file, e.g.:
+
+```
+---
+name: Franklin Desha
+photo: /photos/franklin-desha.webp
+---
+```
+
+The page renders a fixed-width portrait beside the biography. (Centered-crop
+portraits, resize to ~900px wide, and add a light sharpen like this:)
+`npm run photos -- --portrait --sharpen`.
+
+### The processing script
+
+`scripts/process-photos.mjs` (`npm run photos`) is deliberately conservative —
+it never modifies or deletes your originals, and it only touches pixels when you
+ask it to. Useful flags:
+
+```
+npm run photos                          # scans/ -> public/photos (webp, max 1200px)
+npm run photos -- --portrait --sharpen  # center-crop 3:4 + gentle sharpen
+npm run photos -- --format jpeg --quality 84
+npm run photos -- --dry-run --verbose   # preview before writing
+npm run photos -- --input ./my-folder --output public/photos
+```
+
+It strips EXIF/IPTC metadata by default (privacy-aware); pass `--keep-meta` to
+keep it. It does **not** attempt creative restoration (no guesswork cleanup) —
+treat archival photos with the human eye first. Keep web-ready files under a few
+hundred KB each for mobile visitors on rural connections.
 
 ---
 
