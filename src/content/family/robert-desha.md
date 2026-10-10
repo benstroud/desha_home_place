@@ -1,20 +1,24 @@
 ---
 name: Robert Desha
-born: 1700s/1800s
-died: 1800s
+born: "1796"
+died: "1822"
 relationship: Father of Franklin Desha
 order: 3
 ---
 
-Robert Desha was Franklin's father — the family member who settled at **Helena, Arkansas**, on
-the Mississippi River.
+Robert Desha — **Robert Montgomery Desha** (1796–1822) — was Franklin's father, and the family
+member the National Register record for this house associates with settling at **Helena,
+Arkansas**, on the Mississippi River.
 
-He was a son of **Joseph Desha**, the ninth governor of Kentucky, and a brother of **Benjamin
-Desha**, for whom Desha County is named.
+He was a son of **Joseph Desha**, the ninth governor of Kentucky, and thus a nephew of
+**Benjamin Desha**, for whom Desha County is named. He died in **New Orleans** in 1822, when
+Franklin was a small boy. Franklin's mother, **Frances Ann Ferebee** (1797–1839), later married
+**Hartwell Boswell** of Batesville.
 
-A different Robert Desha — the Tennessee congressman (1791–1849) and Joseph's brother — is a
-separate man; he moved to Mobile, Alabama. The Robert our family records place at Helena is the
-governor's son and Franklin's father.
+A different Robert Desha — the Tennessee congressman and **brother** of Governor Joseph Desha —
+was Franklin's **uncle**: a captain in the War of 1812, he represented Tennessee's 5th district
+in the U.S. House of Representatives (1827–1831) before moving to Mobile, Alabama, where he died
+in 1849. He and Franklin's father are two separate men ([Robert Desha](https://en.wikipedia.org/wiki/Robert_Desha), Wikipedia).
 
 <div class="callout callout-family">
 <p class="callout-label">Family note</p>

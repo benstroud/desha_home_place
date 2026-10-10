@@ -15,9 +15,10 @@ Representatives (1807–1819) and in Kentucky's legislature. A veteran of the **
 fought at the **Battle of the Thames**. His governorship was turbulent — it included the famous
 "Old Court–New Court" controversy and a controversial pardon of his own son.
 
-His brother was a Robert Desha (the Tennessee congressman), and the Desha family carried its
-Kentucky roots westward into Arkansas, where Joseph's grandson Franklin built the house you can
-visit today.
+His son **Robert Montgomery Desha** was Franklin's father, and his brother was also named
+**Robert Desha** — the Tennessee congressman — so the two Roberts of the family were uncle and
+nephew. The Desha family carried its Kentucky roots westward into Arkansas, where Joseph's
+grandson Franklin built the house you can visit today.
 
 <div class="callout callout-family">
 <p class="callout-label">Family note</p>
