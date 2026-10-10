@@ -9,16 +9,14 @@ order: 3
 Robert Desha was Franklin's father — the family member who settled at **Helena, Arkansas**, on
 the Mississippi River.
 
-The published record around the Robert Deshas of this family is genuinely tangled: there is a
-well-documented Robert Desha (1791–1849) who was a Tennessee congressman and the brother of
-Governor Joseph Desha — but who moved to Mobile, Alabama, not Helena. The National Register
-record for this house, however, names Franklin's father as a Robert Desha who settled Helena.
+He was a son of **Joseph Desha**, the ninth governor of Kentucky, and a brother of **Benjamin
+Desha**, for whom Desha County is named.
 
-There were evidently more than one Robert Desha in the family, and the family's own records are
-the final authority on which is which. The full family tree — with the sources that settle this
-question — is coming to this site.
+A different Robert Desha — the Tennessee congressman (1791–1849) and Joseph's brother — is a
+separate man; he moved to Mobile, Alabama. The Robert our family records place at Helena is the
+governor's son and Franklin's father.
 
 <div class="callout callout-family">
 <p class="callout-label">Family note</p>
-<p>▲ This is the "two Roberts" question — please help resolve it from the family Bible, deeds, and probate records, and we'll publish the sourced answer here.</p>
+<p>▲ Confirm the line from Joseph to Robert to Franklin against the family Bible, deeds, and probate records, and we'll publish the sourced answer here.</p>
 </div>
