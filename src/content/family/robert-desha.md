@@ -1,12 +1,12 @@
 ---
-name: Robert Desha
-born: "1796"
-died: "1822"
+name: Captain Robert Montgomery Desha
+born: June 20, 1796
+died: November 6 1822
 relationship: Father of Franklin Desha
 order: 3
 ---
 
-Robert Desha — **Robert Montgomery Desha** (1796–1822) — was Franklin's father, and the family
+R.M. Desha — **Captain Robert Montgomery Desha** (1796–1822) — was Franklin's father, and the family
 member the National Register record for this house associates with settling at **Helena,
 Arkansas**, on the Mississippi River.
 

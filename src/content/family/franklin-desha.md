@@ -1,7 +1,7 @@
 ---
 name: Franklin Desha
-born: "1819"
-died: "1869"
+born: February 28 1819
+died: April 30 1869
 relationship: Builder of the house
 order: 1
 photos:
@@ -14,19 +14,25 @@ photos:
 **Franklin Wharton Desha** (1819–1869) — who went by **"F.W."** — built this house in **1847**,
 and it has been in his family ever since.
 
-He was born on **February 28, 1819**, at the Washington Navy Yard, the son of **Capt. Robert
-Montgomery Desha** (1796–1822) and **Frances Ann Ferebee** (1797–1839). His father died in New
-Orleans in 1822; his mother later married **Hartwell Boswell**, a prominent early figure of
-nearby **Batesville**, where she died in 1839. Franklin was the grandson of **Joseph Desha**,
-the ninth governor of Kentucky, and the nephew of **Benjamin Desha**, for whom **Desha County**
-is named.
+He was born on **February 28, 1819**, at the [Washington Navy
+Yard](https://en.wikipedia.org/wiki/Washington_Navy_Yard), the son of
+**Capt.Robert Montgomery Desha** (1796–1822) and **Frances Ann Ferebee**
+(1797–1839). His father died in New Orleans in 1822; his mother later married
+**Hartwell Boswell**, [a prominent early
+figure](https://www.jstor.org/stable/40023694) of nearby **Batesville**, where
+she died in
+1839. Franklin was the grandson of **Joseph Desha**, the ninth governor of
+Kentucky, and the nephew of **Benjamin Desha**, for whom **Desha County** is
+named.
 
-He attended the U.S. Military Academy at **West Point** in 1834, and he was a veteran of the
-**Mexican–American War**. On **November 18, 1847**, in Batesville, he married **Elizabeth Jett
-Searcy**, daughter of **Richard Searcy** — the judge for whom **Searcy** and **Searcy County**
-are named.
+He attended the [U.S. Military
+Academy](https://en.wikipedia.org/wiki/United_States_Military_Academy) at **West
+Point** in 1834, and he was a veteran of the **Mexican–American War**. On
+**November 18, 1847**, in Batesville, he married **Elizabeth Jett Searcy**,
+daughter of **James Searcy** and niece of **Richard Searcy** — the judge for
+whom **Searcy** and **Searcy County** are named.
 
-Franklin and Elizabeth raised a large family. Their children were:
+The children of Franklin and Elizabeth were:
 
 - Robert Montgomery Desha (1848–1897)
 - James Searcy Desha (1850–1851)

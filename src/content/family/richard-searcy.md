@@ -1,18 +1,17 @@
 ---
 name: Richard Searcy
-born: late 1700s
-died: 1800s
-relationship: Father of Elizabeth Searcy Desha
+born: September 6, 1794
+died: December 25, 1832
+relationship: Uncle of Elizabeth Searcy Desha
 order: 6
 ---
+
+Richard Searcy was Elizabeth Searcy Desha's uncle.
 
 Richard Searcy was the first clerk and judge in the **Arkansas Territory** — and the man for whom
 both the city of **Searcy** and **Searcy County** are named (the county was created December 13,
 1838, the day after Desha County).
 
-His daughter Elizabeth married Franklin Desha, uniting the Desha and Searcy families. Between
-them, the two names run through Arkansas history like a watermark — a county for each, a city
-for one, and a house that still stands as their shared legacy.
 
 <div class="callout callout-family">
 <p class="callout-label">Family note</p>

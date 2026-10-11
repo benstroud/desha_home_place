@@ -1,7 +1,7 @@
 ---
 name: Benjamin Desha
-born: unknown
-died: November 21, 1835
+born: "1790"
+died: "1835"
 relationship: Uncle of Franklin Desha
 order: 5
 ---
