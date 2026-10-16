@@ -25,12 +25,10 @@ she died in
 Kentucky, and the nephew of **Benjamin Desha**, for whom **Desha County** is
 named.
 
-He attended the [U.S. Military
-Academy](https://en.wikipedia.org/wiki/United_States_Military_Academy) at **West
-Point** in 1834, and he was a veteran of the **Mexican–American War**. On
-**November 18, 1847**, in Batesville, he married **Elizabeth Jett Searcy**,
-daughter of **James Searcy** and niece of **Richard Searcy** — the judge for
-whom **Searcy** and **Searcy County** are named.
+He was a veteran of the **Mexican–American War**. On **November 18, 1847**, in
+Batesville, he married **Elizabeth Jett Searcy**, daughter of **James Searcy**
+and niece of **Richard Searcy** — the judge for whom **Searcy** and **Searcy
+County** are named.
 
 The children of Franklin and Elizabeth were:
 
