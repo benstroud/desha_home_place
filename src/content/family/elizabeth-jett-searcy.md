@@ -1,7 +1,5 @@
 ---
 name: Elizabeth Jett Searcy
-born: "1792"
-died: "1837"
 relationship: Wife of Franklin Desha
 order: 2
 photos:
@@ -11,10 +9,11 @@ photos:
     caption: Elizabeth in her later years
 ---
 
-Elizabeth Jett Searcy was the wife of **Franklin Desha** and the daughter of
-**James Searcy**. James Searcy was the younger brother of **Richard Searcy**,
-the first clerk and judge of the Arkansas Territory, for whom the city of
-**Searcy** and **Searcy County** are named.
+Elizabeth Jett Searcy was the wife of **Franklin Desha** and the daughter of **James Searcy** and
+**Martha Searcy**, of Virginia. Her father, a veteran of the War of 1812 who served under General
+Andrew Jackson, moved the family to Batesville in 1829. Her uncle **Richard Searcy** was the first
+clerk and judge of the Arkansas Territory, for whom the city of **Searcy** and **Searcy County**
+are named.
 
 The two portraits above show her as a young woman and in her later years. Together she and
 Franklin raised their family in the house he built in **1847**, which passed down through their
@@ -22,5 +21,5 @@ descendants — the Stroud and Vandiver lines — and remains a family home toda
 
 <div class="callout callout-family">
 <p class="callout-label">Family note</p>
-<p>▲ Add Elizabeth's full dates, her birth family, the couple's children, and the family's own stories about her. A full biography with source citations is coming in the genealogy update.</p>
+<p>▲ Add Elizabeth's full dates, the couple's children, and the family's own stories about her. A full biography with source citations is coming in the genealogy update.</p>
 </div>

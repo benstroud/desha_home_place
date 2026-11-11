@@ -13,9 +13,10 @@ President James Monroe appointed him receiver of public moneys for the **Arkansa
 bringing the Desha family west from Kentucky. He died in 1835, and three years later the
 Arkansas legislature created **Desha County** (December 12, 1838) in his honor.
 
-His brother's grandson — Franklin Desha — built the house this site celebrates.
+Franklin was the son of Benjamin's brother, Captain Robert Montgomery Desha, who was a son of
+Governor Joseph Desha of Kentucky. The house Franklin built in 1847 is the house this site celebrates.
 
 <div class="callout callout-family">
 <p class="callout-label">Family note</p>
-<p>▲ Confirm the exact relationship between Benjamin and Franklin against family records, and add any family recollections of Benjamin.</p>
+<p>▲ Add any family recollections of Benjamin.</p>
 </div>

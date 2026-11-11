@@ -19,8 +19,3 @@ His son **Robert Montgomery Desha** was Franklin's father, and his brother was a
 **Robert Desha** — the Tennessee congressman — so the two Roberts of the family were uncle and
 nephew. The Desha family carried its Kentucky roots westward into Arkansas, where Joseph's
 grandson Franklin built the house you can visit today.
-
-<div class="callout callout-family">
-<p class="callout-label">Family note</p>
-<p>▲ Confirm the family line from Joseph to Franklin against the family's records, and share any family knowledge of the Kentucky years.</p>
-</div>
